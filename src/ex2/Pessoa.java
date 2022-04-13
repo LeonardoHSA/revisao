@@ -31,18 +31,32 @@ public class Pessoa {
         this.dataNascimento = dataNascimento;
     }
     
-    public void insertNomeUni(String nome, Universidade uni, String dataNascimento){
+    public Departamento getDep() {
+		return dep;
+	}
+
+	public void setDep(Departamento dep) {
+		this.dep = dep;
+	}
+    
+    public void insertNomeUniDep(String nome, Universidade uni, Departamento dep, String dataNascimento){
         
         this.nome = nome;
         this.uni = uni;
+        this.dep = dep;
         this.dataNascimento = dataNascimento;
     }
+    
+    
     
     public void status(){
         
         System.out.println("Nome: " + this.getNome());
         System.out.println("Universidade: " + this.getUni().getNome());
+        System.out.println("Departamento: " + this.getDep().getNome());
         System.out.println("Data de nascimento: " + this.getDataNascimento());
         System.out.println("===================================");
     }
+
+	
 }

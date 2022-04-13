@@ -2,13 +2,16 @@ package ex2;
 
 import java.util.ArrayList;
 
+
 public class Universidade {
 	
 	private String nome;
 	
 	private ArrayList<Departamento> listaDepartamentos;
 	
-	public Universidade() {
+	public Universidade(String nome) {
+		
+		this.nome = nome;
 		
 		this.listaDepartamentos = new ArrayList<Departamento>();
 	}
@@ -29,11 +32,19 @@ public class Universidade {
 		this.listaDepartamentos = listaDepartamentos;
 	}
     
-	public void addDepartamentos(String nomeDep) {
+	public void addDepartamentos(String nomeDep, Universidade uni) {
 		
 		Departamento dep;
 		
-		listaDepartamentos.add(dep = new Departamento(nomeDep));
+		listaDepartamentos.add(dep = new Departamento(nomeDep, uni));
+	}
+	
+	public void listaDepartamentos() {
+		
+		for(int i = 0; i < this.listaDepartamentos.size(); i++) {
+			
+			System.out.println(this.listaDepartamentos.get(i).getNome());
+		}
 	}
     
 }
