@@ -1,16 +1,16 @@
 package ex3;
 
-public abstract class Pessoa {
+public class Pessoa {
 
 	private String nome;
 	private int idade;
-	
+
 	public Pessoa(String nome, int idade) {
-		
+
 		this.nome = nome;
 		this.idade = idade;
 	}
-	
+
 	public String getNome() {
 		return nome;
 	}
@@ -26,10 +26,11 @@ public abstract class Pessoa {
 	public void setIdade(int idade) {
 		this.idade = idade;
 	}
-	
+
 	public void mostraDados() {
-		
-		
+
+		System.out.println("Nome: " + this.getNome());
+		System.out.println("Idade: " + this.getIdade());
 	}
-	
+
 }
