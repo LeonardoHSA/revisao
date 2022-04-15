@@ -20,14 +20,7 @@ public static void main(String[] args) {
         
         p1.status();
         p2.status();
-        
-       
-        
-        
-        
-        
-        
-        
+           
         
     }
 }
